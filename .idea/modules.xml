@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jt1708-common/jt1708-common.iml" filepath="$PROJECT_DIR$/jt1708-common/jt1708-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-controller/jt1708-manage-controller.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-controller/jt1708-manage-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-mapper/jt1708-manage-mapper.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-mapper/jt1708-manage-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-pojo/jt1708-manage-pojo.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-pojo/jt1708-manage-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-service/jt1708-manage-service.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-service/jt1708-manage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-parent/jt1708-parent.iml" filepath="$PROJECT_DIR$/jt1708-parent/jt1708-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-web/jt1708-web.iml" filepath="$PROJECT_DIR$/jt1708-web/jt1708-web.iml" />
+    </modules>
+  </component>
+</project>
