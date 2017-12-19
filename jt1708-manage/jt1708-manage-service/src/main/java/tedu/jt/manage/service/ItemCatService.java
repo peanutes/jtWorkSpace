@@ -98,7 +98,7 @@ public class ItemCatService extends BaseService<ItemCat>{
             ItemCatData itemCatData1 = new ItemCatData();
             url = "products/"+itemCat1.getId()+".html";
             itemCatData1.setUrl(url);
-            itemCatData1.setName("<a href=\""+url+"\">"+ itemCatData1.getName()+"</a>");
+            itemCatData1.setName("<a href=\""+url+"\">"+ itemCat1.getName()+"</a>");
             //构建二级菜单
             List<ItemCatData> list2 = new ArrayList<ItemCatData>();
             for (ItemCat itemCat2 : map.get(itemCat1.getId())){

@@ -17,7 +17,7 @@ import java.util.List;
 public class RedisTest {
 
 
-    public void JedisTest(){
+    /*public void JedisTest(){
         Jedis jedis = new Jedis("192.168.163.10",6382);
         for (int i=0;i<50;i++){
             jedis.set(i+"","haha"+i);
@@ -38,5 +38,5 @@ public class RedisTest {
             shardedJedis.set(i+"","haha"+i);
         }
         shardedJedis.close();
-    }
+    }*/
 }

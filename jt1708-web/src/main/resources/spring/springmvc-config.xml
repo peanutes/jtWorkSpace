@@ -8,7 +8,9 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- MVC注解驱动 -->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven>
+
+	</mvc:annotation-driven>
 
 	<!-- 配置扫描器，使得@Controller注解生效 -->
 	<context:component-scan base-package="tedu.jt.web.controller" />

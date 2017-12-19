@@ -51,6 +51,7 @@ public class ItemService extends BaseService<Item>{
      * @param desc
      */
     public void saveItem(Item item,String desc){
+
         item.setStatus(1);
         item.setCreated(new Date());
         item.setUpdated(item.getCreated());
@@ -111,5 +112,14 @@ public class ItemService extends BaseService<Item>{
         map.put("status",1);
         map.put("ids",ids);
         itemMapper.reshelfItems(map);
+    }
+
+    /**
+     * 根据商品id查询商品描述
+     * @param itemId
+     * @return
+     */
+    public ItemDesc queryItemDescById(Long itemId){
+        return itemDescMapper.selectByPrimaryKey(itemId);
     }
 }

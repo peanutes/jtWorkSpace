@@ -8,7 +8,21 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- MVC注解驱动 -->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+		<!-- 定义文本转化器 -->
+		<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+			<constructor-arg index="0" value="UTF-8" />
+		</bean>
+		<!-- 定义json转化器，支持json跨域 -->
+		<bean
+				class="tedu.jt.common.spring.exetend.jackson.CallbackMappingJackson2HttpMessageConverter">
+			<!-- 跨域请求中的请求参数名 -->
+			<property name="callbackName" value="callback"></property>
+		</bean>
+	</mvc:message-converters>
+
+</mvc:annotation-driven>
 
 	<!-- 配置扫描器，使得@Controller注解生效 -->
 	<context:component-scan base-package="tedu.jt.manage.controller" />
