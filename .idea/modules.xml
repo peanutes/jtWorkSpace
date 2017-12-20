@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-pojo/jt1708-manage-pojo.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-pojo/jt1708-manage-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt1708-manage/jt1708-manage-service/jt1708-manage-service.iml" filepath="$PROJECT_DIR$/jt1708-manage/jt1708-manage-service/jt1708-manage-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt1708-parent/jt1708-parent.iml" filepath="$PROJECT_DIR$/jt1708-parent/jt1708-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt1708-sso/jt1708-sso.iml" filepath="$PROJECT_DIR$/jt1708-sso/jt1708-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt1708-web/jt1708-web.iml" filepath="$PROJECT_DIR$/jt1708-web/jt1708-web.iml" />
     </modules>
   </component>
