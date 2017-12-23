@@ -23,6 +23,13 @@ public class ItemService {
     @Autowired
     private RedisService redisService;
     private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws Exception
+     */
     public Item getItemId(Long id) throws Exception {
         String ITEM_KEY = "ITEM_"+id;
         String jsonData = redisService.get(ITEM_KEY);

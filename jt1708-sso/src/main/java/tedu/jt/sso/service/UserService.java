@@ -93,7 +93,7 @@ public class UserService extends BaseService<User>{
                 ticket = DigestUtils.md5Hex("TICKET_"+curUser.getUsername()+System.currentTimeMillis());
 
                 try {
-                    redisService.set(ticket, MAPPER.writeValueAsString(user),60*60*24);
+                    redisService.set(ticket, MAPPER.writeValueAsString(curUser),60*60*24);
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }

@@ -24,6 +24,7 @@ public class Item extends BasePojo{
     private String image;
     private Long cid;
     private Integer status;
+    private String[] images;
 
     public Long getId() {
         return id;

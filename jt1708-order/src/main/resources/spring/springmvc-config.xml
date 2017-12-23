@@ -9,11 +9,23 @@
 
 	<!-- MVC注解驱动 -->
 	<mvc:annotation-driven>
+		<mvc:message-converters>
+		<!-- 定义文本转化器 -->
+		<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+			<constructor-arg index="0" value="UTF-8" />
+		</bean>
+		<!-- 定义json转化器，支持json跨域 -->
+		<bean
+				class="tedu.jt.common.spring.exetend.jackson.CallbackMappingJackson2HttpMessageConverter">
+			<!-- 跨域请求中的请求参数名 -->
+			<property name="callbackName" value="callback"></property>
+		</bean>
+	</mvc:message-converters>
 
-	</mvc:annotation-driven>
+</mvc:annotation-driven>
 
 	<!-- 配置扫描器，使得@Controller注解生效 -->
-	<context:component-scan base-package="tedu.jt.web.controller" />
+	<context:component-scan base-package="tedu.jt.order.controller" />
 
 	<!-- 定义视图解析器 -->
 	<!-- prefix="/WEB-INF/jsp/", suffix=".jsp", viewname="test" -> "/WEB-INF/jsp/test.jsp" -->
@@ -27,12 +39,4 @@
 
 	<!-- 处理静态资源被“/”所拦截的问题 -->
 	<mvc:default-servlet-handler />
-
-	<!--拦截器-->
-	<mvc:interceptors>
-		<mvc:interceptor>
-			<mvc:mapping path="/cart/**"/>
-			<bean class="tedu.jt.web.controller.interceptor.CartIntercetor"/>
-		</mvc:interceptor>
-	</mvc:interceptors>
 </beans>

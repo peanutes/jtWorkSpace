@@ -19,12 +19,14 @@ import tedu.jt.web.service.ItemService;
 public class ItemController {
     @Autowired
     private ItemService itemService;
+
     @RequestMapping("/items/{itemId}")
     public String getItemId(@PathVariable Long itemId, Model model) throws Exception {
         Item item = itemService.getItemId(itemId);
-        model.addAttribute("item",item);
+        model.addAttribute("item", item);
         ItemDesc itemDesc = itemService.getItemDescById(itemId);
-        model.addAttribute("itemDesc",itemDesc);
+        model.addAttribute("itemDesc", itemDesc);
         return "item";
     }
+
 }

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jt1708-cart:war">
+    <output-path>$PROJECT_DIR$/jt1708-cart/target</output-path>
+    <root id="archive" name="jt1708-cart-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jt1708-cart:war exploded" />
+    </root>
+  </artifact>
+</component>
