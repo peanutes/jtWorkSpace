@@ -3,6 +3,24 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tedu.jt.cart.mapper.OrderMapper">
+    <resultMap id="OrderRM" type="Order" autoMapping="true">
+        <!--主键-->
+        <id column="order_id" property="orderId"/>
+        <!--一对一-->
+        <association property="orderShipping" select="queryOrderShippingById" column="order_id" javaType="OrderShipping"/>
+        <!--一对多-->
+        <collection property="orderItem" select="queryOrderItemById" column="order_id" javaType="ArrayList" ofType="OrderItem"/>
+    </resultMap>
 
+    <select id="queryOrderItemById" parameterType="String" resultMap="OrderItem">
+        SELECT * FROM tb_order_item WHERE order_id = #{orderId}
+    </select>
+    <select id="queryOrderShippingById" parameterType="String" resultMap="OrderShipping">
+        SELECT * FROM tb_order_shipping WHERE order_id = #{orderId}
+    </select>
+    <!--新增Order对象关联，利用数据库的事物，只有mysql可以-->
 
+    <select id="queryOrderById" parameterType="String" resultMap="OrderRM">
+        SELECT * FROM tb_order WHERE order_id = #{orderId}
+    </select>
 </mapper>
