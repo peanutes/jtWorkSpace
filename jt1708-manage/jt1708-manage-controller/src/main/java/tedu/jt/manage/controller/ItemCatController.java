@@ -25,8 +25,7 @@ public class ItemCatController {
     @ResponseBody
     public List<ItemCat> queryItemCatList(@RequestParam(defaultValue = "0") Long id){
 
-        List<ItemCat> list = itemCatService.queryItemCatList(id);
-        return list;
+        return itemCatService.queryItemCatList(id);
     }
 
 
