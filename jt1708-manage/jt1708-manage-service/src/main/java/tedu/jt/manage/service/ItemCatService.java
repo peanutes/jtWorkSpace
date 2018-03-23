@@ -47,8 +47,7 @@ public class ItemCatService extends BaseService<ItemCat>{
             try {
                 jsonNode = MAPPER.readTree(jsonData);
                 if (jsonNode.isArray() && jsonNode.size() > 0) {
-                    List<ItemCat> itemCatList = MAPPER.readValue(jsonNode.traverse(), MAPPER.getTypeFactory().constructCollectionType(List.class, ItemCat.class));
-                    return itemCatList;
+                    return MAPPER.readValue(jsonNode.traverse(), MAPPER.getTypeFactory().constructCollectionType(List.class, ItemCat.class));
                 }
 
             } catch (IOException e) {
