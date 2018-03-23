@@ -120,6 +120,7 @@ public class ItemService extends BaseService<Item>{
      * @return
      */
     public ItemDesc queryItemDescById(Long itemId){
-        return itemDescMapper.selectByPrimaryKey(itemId);
+        ItemDesc itemDesc =itemDescMapper.selectByPrimaryKey(itemId)
+        return itemDesc;
     }
 }
