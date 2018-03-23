@@ -24,8 +24,8 @@ public class ItemCatController {
     @RequestMapping("/list")
     @ResponseBody
     public List<ItemCat> queryItemCatList(@RequestParam(defaultValue = "0") Long id){
-
-        return itemCatService.queryItemCatList(id);
+        List<ItemCat> itemCats = itemCatService.queryItemCatList(id);
+        return itemCats;
     }
 
 
